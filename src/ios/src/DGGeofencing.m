@@ -328,7 +328,7 @@
     [[self locationManager] startMonitoringSignificantLocationChanges];
 
     CDVPluginResult *result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
-    [self.commandDelegate sendPluginResult:result callbackId:callbackId];
+    [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
 }
 
 - (void) stopMonitoringSignificantLocationChanges:(CDVInvokedUrlCommand*)command {
@@ -390,7 +390,7 @@
     [[self locationManager] stopMonitoringSignificantLocationChanges];
 
     CDVPluginResult *result = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK];
-    [self.commandDelegate sendPluginResult:result callbackId:callbackId];
+    [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
 }
 
 #pragma mark Location Delegate Callbacks
