@@ -282,8 +282,7 @@
             [posError setObject:[NSNumber numberWithInt:GEOFENCINGPERMISSIONDENIED] forKey:@"code"];
             [posError setObject:@"Location services are not enabled." forKey:@"message"];
             CDVPluginResult* result = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsDictionary:posError];
-            [result setKeepCallbackAsBool:YES];
-            [self.commandDelegate sendPluginResult:result callbackId:callbackId];
+            [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
 			return;
 		}
     }
@@ -307,8 +306,7 @@
         [posError setObject:[NSNumber numberWithInt:GEOFENCINGPERMISSIONDENIED] forKey:@"code"];
         [posError setObject:message forKey:@"message"];
         CDVPluginResult* result = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsDictionary:posError];
-        [result setKeepCallbackAsBool:YES];
-        [self.commandDelegate sendPluginResult:result callbackId:callbackId];
+        [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
         
         return;
     }
@@ -320,8 +318,7 @@
         [posError setObject:[NSNumber numberWithInt:GEOFENCINGPERMISSIONDENIED] forKey:@"code"];
         [posError setObject:@"Location services are not available." forKey:@"message"];
         CDVPluginResult* result = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsDictionary:posError];
-        [result setKeepCallbackAsBool:YES];
-        [self.commandDelegate sendPluginResult:result callbackId:callbackId];
+        [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
         return;
     }
     
@@ -344,8 +341,7 @@
             [posError setObject:[NSNumber numberWithInt:GEOFENCINGPERMISSIONDENIED] forKey:@"code"];
             [posError setObject:@"Location services are not enabled." forKey:@"message"];
             CDVPluginResult* result = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsDictionary:posError];
-            [result setKeepCallbackAsBool:YES];
-            [self.commandDelegate sendPluginResult:result callbackId:callbackId];
+            [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
 			return;
 		}
     }
@@ -369,8 +365,7 @@
         [posError setObject:[NSNumber numberWithInt:GEOFENCINGPERMISSIONDENIED] forKey:@"code"];
         [posError setObject:message forKey:@"message"];
         CDVPluginResult* result = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsDictionary:posError];
-        [result setKeepCallbackAsBool:YES];
-        [self.commandDelegate sendPluginResult:result callbackId:callbackId];
+        [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
         
         return;
     }
@@ -382,8 +377,7 @@
         [posError setObject:[NSNumber numberWithInt:GEOFENCINGPERMISSIONDENIED] forKey:@"code"];
         [posError setObject:@"Location services are not available." forKey:@"message"];
         CDVPluginResult* result = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsDictionary:posError];
-        [result setKeepCallbackAsBool:YES];
-        [self.commandDelegate sendPluginResult:result callbackId:callbackId];
+        [self.commandDelegate sendPluginResult:result callbackId:command.callbackId];
         return;
     }
     
